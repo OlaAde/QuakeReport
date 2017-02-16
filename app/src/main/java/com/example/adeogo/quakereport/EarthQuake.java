@@ -6,29 +6,37 @@ package com.example.adeogo.quakereport;
 
 public class EarthQuake {
 
-    private String mMagnitude;
+    private double mMagnitude;
 
     private String mPlace;
 
-    private String mDate;
+    private long mTime;
 
-    public EarthQuake(String Magnitude, String Place, String Date){
+    private String mUrl;
+
+    public EarthQuake(double Magnitude, String Place, long Time, String Url){
         mMagnitude = Magnitude;
 
         mPlace = Place;
 
-        mDate = Date;
+        mTime = Time;
+
+        mUrl = Url;
+
     }
 
-    public String getmMagnitude() {
+    public double getmMagnitude() {
         return mMagnitude;
+    }
+    public String getmUrl() {
+        return mUrl;
     }
 
     public String getmPlace() {
         return mPlace;
     }
 
-    public String getmDate() {
-        return mDate;
+    public long getmTime() {
+        return mTime;
     }
 }
